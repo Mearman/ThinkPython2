@@ -24,7 +24,7 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
-      - name: LaTeX compilation
+      - name: LaTeX compilation #see https://github.com/marketplace/actions/github-action-for-latex
         uses: xu-cheng/latex-action@v2
         with:
           working_directory: ./book
@@ -34,3 +34,4 @@ jobs:
         with:
           name: PDF
           path: ./book/book.pdf
+# Add release asset https://github.com/marketplace/actions/upload-a-release-asset
